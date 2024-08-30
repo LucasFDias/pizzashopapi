@@ -15,6 +15,7 @@ CREATE TABLE IF NOT EXISTS "users" (
 	"name" text NOT NULL,
 	"email" text NOT NULL,
 	"phone" text,
+	"address" text NOT NULL,
 	"role" "user_role" DEFAULT 'customer' NOT NULL,
 	"created_at" timestamp DEFAULT now(),
 	"updated_at" timestamp DEFAULT now()
@@ -23,6 +24,7 @@ CREATE TABLE IF NOT EXISTS "users" (
 CREATE TABLE IF NOT EXISTS "restaurants" (
 	"id" text PRIMARY KEY NOT NULL,
 	"name" text NOT NULL,
+	"address" text NOT NULL,
 	"description" text,
 	"manager_id" text,
 	"created_at" timestamp DEFAULT now(),
